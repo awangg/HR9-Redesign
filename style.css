@@ -1,3 +1,13 @@
+html,
+body {
+	background-image: url('./res/images/sallyport.jpg');
+	height: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 nav {
 	background-color: #0b13a1;
 }
@@ -14,4 +24,8 @@ nav {
 .nav-item:hover {
 	background-color: #fff;
 	color: #0b13a1;
+}
+
+#res-intro {
+	margin-top: 10rem;
 }
