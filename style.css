@@ -33,6 +33,27 @@ nav {
 }
 
 /* Top Buttons */
+/* Colors */
+#toggle-college-assign {
+	background-color: #0b13a1;
+	border-color: #0b13a1;
+}
+
+#toggle-college-magister {
+	background-color: #0c17cf;
+	border-color: #0c17cf;
+}
+
+#toggle-res-assoc {
+	background-color: #0e1bed;
+	border-color: #0e1bed;
+}
+
+#toggle-college-coord {
+	background-color: #3641ff;
+	border-color: #3641ff;
+}
+
 /* Default */
 #college-assign-content,
 #college-magister-content,
