@@ -19,7 +19,7 @@ nav {
 
 /* Parallax Images */
 .parallax {
-	padding-top: 5em;
+	padding-top: 3em;
 	min-height: 60em;
 	background-attachment: fixed;
 	background-position: center;
@@ -78,7 +78,7 @@ nav {
 }
 
 .college-description {
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 .divider {
@@ -94,16 +94,133 @@ nav {
 }
 
 #baker-info-toggle:hover {
+	background-color: #b3b9c4;
+	border-color: #b3b9c4;
+}
+
+#willrice-info-toggle {
+	background-color: #b81212;
+	border-color: #b81212;
+}
+
+#willrice-info-toggle:hover {
 	background-color: #bd9e11;
 	border-color: #bd9e11;
 }
 
-/* College Specific Info */
-#baker-info {
-	display: none;
+#hanszen-info-toggle {
+	background-color: #4169e1;
+	border-color: #4169e1;
 }
 
-#baker-web-prompt {
+#hanszen-info-toggle:hover {
+	background-color: #e6ed24;
+	border-color: #e6ed24;
+}
+
+#wiess-info-toggle {
+	background-color: #daa520;
+	border-color: #daa520;
+}
+
+#wiess-info-toggle:hover {
+	background-color: #000;
+	border-color: #000;
+}
+
+#jones-info-toggle {
+	background-color: #006605;
+	border-color: #006605;
+}
+
+#jones-info-toggle:hover {
+	background-color: #8800d1;
+	border-color: #8800d1;
+}
+
+#brown-info-toggle {
+	background-color: #800000;
+	border-color: #800000;
+}
+
+#brown-info-toggle:hover {
+	background-color: #ffdf00;
+	border-color: #ffdf00;
+}
+
+#lovett-info-toggle {
+	background-color: #000080;
+	border-color: #000080;
+}
+
+#lovett-info-toggle:hover {
+	background-color: #e6ed24;
+	border-color: #e6ed24;
+}
+
+#sidrich-info-toggle {
+	background-color: #f00;
+	border-color: #f00;
+}
+
+#sidrich-info-toggle:hover {
+	background-color: #daa520;
+	border-color: #daa520;
+}
+
+#martel-info-toggle {
+	background-color: #007fff;
+	border-color: #007fff;
+}
+
+#martel-info-toggle:hover {
+	background-color: #800000;
+	border-color: #800000;
+}
+
+#mcmurtry-info-toggle {
+	background-color: #7851a9;
+	border-color: #7851a9;
+}
+
+#mcmurtry-info-toggle:hover {
+	background-color: #c0c0c0;
+	border-color: #c0c0c0;
+}
+
+#duncan-info-toggle {
+	background-color: #228b22;
+	border-color: #228b22;
+}
+
+#duncan-info-toggle:hover {
+	background-color: #daa520;
+	border-color: #daa520;
+}
+
+/* College Specific Info */
+#baker-info,
+#baker-web-prompt,
+#willrice-info,
+#willrice-web-prompt,
+#hanszen-info,
+#hanszen-web-prompt,
+#wiess-info,
+#wiess-web-prompt,
+#jones-info,
+#jones-web-prompt,
+#brown-info,
+#brown-web-prompt,
+#lovett-info,
+#lovett-web-prompt,
+#sidrich-info,
+#sidrich-web-prompt,
+#martel-info,
+#martel-web-prompt,
+#mcmurtry-info,
+#mcmurtry-web-prompt,
+#duncan-info,
+#duncan-web-prompt {
 	display: none;
 }
 
@@ -112,11 +229,68 @@ nav {
 	color: #b81212;
 }
 
-#baker-info-toggle:hover + #baker-info {
-	display: block;
+#willrice-web-link:hover {
+	color: #bd9e11;
 }
 
-#baker-web-link:hover + #baker-web-prompt {
+#hanszen-web-link:hover {
+	color: #4169e1;
+}
+
+#wiess-web-link:hover {
+	color: #daa520;
+}
+
+#jones-web-link:hover {
+	color: #006605;
+}
+
+#brown-web-link:hover {
+	color: #800000;
+}
+
+#lovett-web-link:hover {
+	color: #000080;
+}
+
+#sidrich-web-link:hover {
+	color: #f00;
+}
+
+#martel-web-link:hover {
+	color: #007fff;
+}
+
+#mcmurtry-web-link:hover {
+	color: #7851a9;
+}
+
+#duncan-web-link:hover {
+	color: #228b22;
+}
+
+#baker-info-toggle:focus + #baker-info,
+#baker-web-link:hover + #baker-web-prompt,
+#willrice-info-toggle:focus + #willrice-info,
+#willrice-web-link:hover + #willrice-web-prompt,
+#hanszen-info-toggle:focus + #hanszen-info,
+#hanszen-web-link:hover + #hanszen-web-prompt,
+#wiess-info-toggle:focus + #wiess-info,
+#wiess-web-link:hover + #wiess-web-prompt,
+#jones-info-toggle:focus + #jones-info,
+#jones-web-link:hover + #jones-web-prompt,
+#brown-info-toggle:focus + #brown-info,
+#brown-web-link:hover + #brown-web-prompt,
+#lovett-info-toggle:focus + #lovett-info,
+#lovett-web-link:hover + #lovett-web-prompt,
+#sidrich-info-toggle:focus + #sidrich-info,
+#sidrich-web-link:hover + #sidrich-web-prompt,
+#martel-info-toggle:focus + #martel-info,
+#martel-web-link:hover + #martel-web-prompt,
+#mcmurtry-info-toggle:focus + #mcmurtry-info,
+#mcmurtry-web-link:hover + #mcmurtry-web-prompt,
+#duncan-info-toggle:focus + #duncan-info,
+#duncan-web-link:hover + #duncan-web-prompt {
 	display: block;
 }
 
