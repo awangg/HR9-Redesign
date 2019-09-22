@@ -5,346 +5,743 @@
 	<link rel="stylesheet" media="screen" href="style.css">
 	<meta name="author" content="HackRice">
 	<meta name="description" content="Information on Rice University's 11 Residential Colleges.">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="res/webfonts/all.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 
-<body id="rice-residential-colleges">
-<div class="page-wrapper">
-
-	<section class="intro" id="colleges-intro">
-		<header role="banner">
-			<h1>Rice University</h1>
-			<h2>Residential Colleges</h2>
-		</header>
-
-		<div class="summary" id="colleges-summary" role="article">
-			<p>
-				Undergraduate life at Rice University differs from that at many universities because of Rice's tradition of residential colleges. Before matriculating, each of the university's undergraduates becomes a member of one of 11 residential colleges, which have their own dining halls, public rooms, and dorms on campus; most of the first-year students and about 75 percent of all undergraduates reside at their associated colleges. 
-			</p>
-			<p>
-				Because each student is randomly assigned to one of the colleges, and maintains membership in the same college throughout their undergraduate years, the colleges are enriched by the diversity of their students' backgrounds, academic interests and experiences, talents, and goals. 
-			</p>
-			<p>
-				A faculty magister, who is assigned to each college and lives in an adjacent house, helps cultivate a variety of cultural and intellectual interests among the students, as well as supporting an effective system of self-government. Other faculty or members of the community serve as associates to individual colleges. 
-			</p>
-			<p>
-				The experience of college residence is indispensable to conveying the rich flavor of academic life at Rice, allowing students to combine their usual studies with an array of social events, intramural sports, student plays, lecture series, innovative college-designed courses, and an active role in student government.
-			</p>
+<body>
+	<!-- Header -->
+	<header style="background-color: #fff;">
+	<div class="container pt-5 pb-4">
+		<div class="row">
+			<div class="col-md-8">
+				<img src="https://dou.rice.edu/sites/all/themes/custom/ricestark/images/rice-logo-alt.jpg" alt="">
+				<a class="text-dark" href="#"> Office of the Dean of Undergraduates </a>
+			</div>
+			<div class="col-md-4 text-right">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search...">
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+					</div>
+				</div>
+			</div>
 		</div>
-	</section>
+	</div>
+	</header>
 
-	<section class="details" id="colleges-details">
-		<div class="Baker" id="baker-college">
-			<h3>Baker College</h3>
-			<p>
-				Addison Baker College is named in honor of Captain James A. Baker, friend and attorney of William Marsh Rice, and first chair of the Rice Board of Governors. He served as the Rice Institute's first chairman on the Board of Trustees from June 24, 1891, until his death in 1941.
-			</p>
-			<p class="Magister" id="baker-magister">
-				<h4>Magisters</h4>
-				Luis Duno-Gottberg & Angela Duno
-			</p>
-			<p class="College-Coordinator" id="baker-college-coordinator">
-				<h4>College Coordinator</h4>
-				Veronica Bernal
-			</p>
-			<p class="RA" id="baker-RAs">
-				<h4>Residential Associates</h4>
-				Laura Welch Fitch & Greg Fitch
-				Bobby Beaird & Matt Patterson
-			</p>
-			<p class="President" id="baker-president">
-				<h4>President</h4>
-				James Warner 
-			</p>
-			<p class="CJ" id="baker-CJ">
-				<h4>Chief Justice</h4>
-				Varsha Varghese 
-			</p>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg">
+		<ul class="navbar-nav mx-auto">
+			<li class="nav-item">
+				<a class="nav-link"> Home </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"> Dean's Office </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"> Student Resources </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"> Departments & Offices </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"> Residential Colleges </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"> Contact </a>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- Parallax Images -->
+	<div class="parallax" id="rice">
+		<div class="container">
+			<div class="pb-1 mb-4" style="background-color:#fff;opacity:.7;"> <h1 class="display-3 text-center mb-4"> The Residential College System </h1> </div>
+			
+			<div class="row mb-4">
+				<div class="col text-center">
+					<button id="toggle-college-assign" class="btn btn-lg btn-primary animated bounceIn mb-2">College Assignments</button>
+					<button id="toggle-college-magister" class="btn btn-lg btn-primary animated bounceIn mb-2">College Magisters</button>
+					<button id="toggle-res-assoc" class="btn btn-lg btn-primary animated bounceIn mb-2">Residential Associates</button>
+					<button id="toggle-college-coord" class="btn btn-lg btn-primary animated bounceIn mb-2">College Coordinators</button>
+					<a class="btn btn-lg btn-primary animated bounceIn mb-2" href="http://associatesprogram.rice.edu/">Associates Program</a>
+					<div id="reg-intro" class="card mx-auto top-info">
+						<div class="card-body">
+							<p>
+								Undergraduate life at Rice University differs from that at many universities because of Rice's 
+								tradition of residential colleges. Before matriculating, each of the university's undergraduates 
+								becomes a member of one of 11 residential colleges, which have their own dining halls, 
+								public rooms, and dorms on campus; most of the first-year students and about 75 percent of 
+								all undergraduates reside at their associated colleges. 
+							</p>
+							<p>
+								Because each student is randomly assigned to one of the colleges, and maintains membership in 
+								the same college throughout their undergraduate years, the colleges are enriched by the 
+								diversity of their students' backgrounds, academic interests and experiences, talents, and goals. 
+							</p>
+							<p>
+								A faculty magister, who is assigned to each college and lives in an adjacent house, helps 
+								cultivate a variety of cultural and intellectual interests among the students, as well as 
+								supporting an effective system of self-government. Other faculty or members of the community 
+								serve as associates to individual colleges. 
+							</p>
+							<p>
+								The experience of college residence is indispensable to conveying the rich flavor of academic 
+								life at Rice, allowing students to combine their usual studies with an array of social events, 
+								intramural sports, student plays, lecture series, innovative college-designed courses, and an 
+								active role in student government.
+							</p>
+						</div>
+					</div>
+					<div id="college-assign-content" class="card mx-auto top-info">
+						<div class="card-body">
+							<p>
+								Rice University houses students in 11 residential colleges: Baker, Will Rice, Hanszen, Wiess, 
+								Jones, Brown, Lovett, Sid Richardson, Martel, McMurtry, and Duncan.  Students are randomly 
+								assigned to colleges; however, great care is taken to ensure that majors, ethnicities, 
+								hometowns, home states, high schools, genders, and athletes, are assigned as evenly as 
+								possible among the colleges.  Thus, only the first two of a group of three of more students 
+								from the same hometown and high school requesting to be roommates and be assigned to the same 
+								college will be honored.  
+							</p>
+							<p>
+								Students are given the option of either requesting to room with a specific incoming student 
+								OR be assigned to the same college as a particular incoming student.  Please be aware that 
+								both students MUST make the same request in writing by the stated deadline.  Unless there 
+								is an immediate family legacy (mother, father, sister, or brother) within a college, 
+								students cannot request to be assigned to a specific college. Students with documented 
+								disabilities must complete the disability accommodations process, so that Disability Support 
+								Services can request an assignment conducive to the specific mobility and accessibility needs.
+							</p>
+							<p style="text-decoration:underline;">
+								Notification of college assignments are mailed via US Mail on July 7th, or the next business day, 
+								should the 7th falls on a weekend. 
+							</p>
+						</div>
+					</div>
+					<div id="college-magister-content" class="card mx-auto top-info">
+						<div class="card-body">
+							<p>
+								College Magisters are tenured faculty members who live, with their families, in houses 
+								adjacent to each college.  Magisters are a supportive resource for students and oversee 
+								all aspects of student life. They encourage broad cultural and intellectual pursuits, ensure 
+								the effectiveness of the college's self-governance, and care for their students' wellbeing. 
+								College Magisters serve as advisors and confidants; promote responsible student government; 
+								encourage student-faculty interaction in the college through cultural and educational 
+								programs, social events, and other activities; and help students understand the university's 
+								broad curriculum and vast experiential learning opportunities.
+							</p>
+							<p style="font-weight:bold; font-size:2rem;">
+								See the college magisters for each college below!
+							</p>
+						</div>
+					</div>
+					<div id="res-assoc-content" class="card mx-auto top-info mb-4">
+						<div class="card-body">
+							<p>
+								Resident Associates (RAs) are crucial to the Rice University college system, assisting 
+								magisters in supporting the intellectual, social, and cultural activities within the college. 
+								Living among the students, Resident Associates are in a unique position to be a positive 
+								community facilitator, role model, and to provide guidance and leadership to college members. 
+								Resident Associates, therefore, must be a visible participant in college life, accessible to 
+								students, and willing to stand in for the magisters, when appropriate.
+							</p>
+							<p>
+								The primary goal of every RA should be to support the magisters in the smooth and effective 
+								running of the college.  Although the specific role that any particular RA plays may vary with 
+								each individual and college, a successful RA will make continual effort to know the members of 
+								the college, be accessible to and serve as a point of contact for all students within the 
+								college, and help students understand and access university resources. RAs will encourage and 
+								contribute actively to the intellectual, cultural, and social life of the college, develop a 
+								clear understanding of university policies and procedures, including emergency response 
+								protocols, and assist the college magisters and other university officials in responding to 
+								students in need.   
+							</p>
+							<p>
+								RAs are appointed by the Dean of Undergraduates for an initial year in the college.  At the 
+								end of the first year, RAs are evaluated by their college magisters, who may then recommend a 
+								three-year appointment, subject to final approval by the Dean of Undergraduates.  The 
+								three-year appointment may be repeated once for a maximum total of seven years.  However, all 
+								RAs will be evaluated each year, and the magisters or the dean may exercise the option of not 
+								renewing an appointment at any time.  Service is conditioned on satisfactory performance.
+							</p>
+							<p>
+								<span style="font-weight:bold;"> Minimum qualifications for RAs: </span>
+								<ul class="text-left">
+									<li> Full-time faculty or staff at Rice University </li>
+									<li> Employed or studied at Rice for at least a year before start of RA term </li>
+									<li> Recent Rice undergraduate alumni, who fulfill all other requirements, must have graduated at least four years prior to appointment </li>
+									<li> All RAs must be in good standing in their employment status </li>
+									<li> All RAs (including non-Rice RAs) need to satisfactorily complete a background check </li>
+									<li> RAs are appointed by the Dean of Undergraduates </li>
+								</ul>
+							</p>
+							<p>
+								Resident Associate openings are announced by the college and the Office of the Dean of 
+								Undergraduates.  The colleges connect with the dean's office about the format of the search 
+								process and coordinate opportunities to meet candidates at programs and events at the colleges. 
+								The Office of the Dean of Undergraduates will host RA Information Sessions once openings are 
+								announced, which can provide considerably greater detail about the role and responsibities of 
+								RAs. Competitive candidates are selected to interview with the college.  The magister(s) select 
+								the finalists and the dean's office appoints RAs to their position. 
+							</p>
+							<p style="font-weight:bold; font-size:2rem;">
+								See the residentials associates for each college below!
+							</p>
+						</div>
+					</div>
+					<div id="college-coord-content" class="card mx-auto top-info">
+						<div class="card-body">
+							<p>
+								College coordinators are staff members who serve as daytime contacts for students within 
+								their assigned college. They typically keep a 9-5 schedule and their duties include managing 
+								the college's office budget, notifying students of important deadlines, sorting the mail, and 
+								acting as the primary contact between the residential colleges and other university offices. 
+								The college coordinator's office is the nerve center of the college, a main meeting place where 
+								students stop by to chat and get answers to questions on everything from how to pay a parking 
+								ticket, replace a room key or when to meet important deadlines. 
+							</p>
+							<p style="font-weight:bold; font-size:2rem;">
+								See the college coordinaters for each college below!
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="pb-1" style="background-color:#fff;opacity:.7;"> <h1 class="display-3 text-center"> Scroll Down to See the Colleges! </h1> </div>
 		</div>
+	</div>
 
-		<div class="Will Rice" id="will-rice-college">
-			<h3>Will Rice College</h3>
-			<p>
-				The college of gods and goddesses. The only college to have ever swept (5 times!). Are you looking to get involved with Will Rice or just see what's happening next? We have around 25 committees of which you could be a member! We have events nearly every week, ranging from food breaks to painting classes to Favorite Professor's Dinner.
-			</p>
-			<p class="Magister" id="will-rice-magister">
-				<h4>Magisters</h4>
-				Matthew & Rebekah Bennett
-			</p>
-			<p class="College-Coordinator" id="will-rice-college-coordinator">
-				<h4>College Coordinator</h4>
-				Dale Thomas
-			</p>
-			<p class="RA" id="will-rice-RAs">
-				<h4>Residential Associates</h4>
-				Sandy & Will Parsons
-				Jeremy & Chelsea Randall
-			</p>
-			<p class="President" id="will-rice-president">
-				<h4>President</h4>
-				Juliette Richert
-			</p>
-			<p class="CJ" id="will-rice-CJ">
-				<h4>Chief Justice</h4>
-				Jake Lesher
-			</p>
+	<div class="divider"></div>
+
+	<div class="parallax" id="baker">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h1 class="display-3 college-name"> <a id="baker-web-link" class="college-web-link" href="https://www.baker-college.com/">Baker College</a> <span class="text-center" style="font-size:18px;" id="baker-web-prompt">Click to go to Baker's website!</span> </h1>
+					<img class="crest" src="res/images/bakercrest.png" alt="">
+					<div class="stats-box border mb-2 px-2" style="width: 25rem;">
+						<span class="align-top"> Bakerites </span> <span class="stats" style="color:#b81212;"> 360 <i class="fas fa-users"></i> </span>
+					</div>
+					<div class="stats-box border px-2" style="width: 25rem;">
+						<span class="align-top"> Established </span> <span class="stats" style="color:#b3b9c4;"> 1957 </span>
+					</div>
+				</div>
+				<div class="col text-center">
+					<div class="stats-box mt-2 px-2" style="color:#000;">
+						<p class="college-description">
+							Addison Baker College is named in honor of Captain James A. Baker, friend and attorney of William 
+							Marsh Rice, and first chair of the Rice Board of Governors. He served as the Rice Institute's 
+							first chairman on the Board of Trustees from June 24, 1891, until his death in 1941.
+						</p>
+					</div>
+					<button class="btn btn-secondary btn-lg mt-2" id="baker-info-toggle"> More Info... </button>
+					<div id="baker-info">
+						<div class="stats-box mt-1 px-2 py-2" style="color:#000;">
+							<h4> Magisters </h4>
+							<p> Luis Duno-Gottberg & Angela Duno </p>
+							<h4> College Coordinator </h4>
+							<p> Veronica Bernal </p>
+							<h4> Resident Associates </h4>
+							<p> Laura Welch Fitch & Greg Fitch <br> Bobby Beaird & Matt Patterson </p>
+							<h4> President </h4>
+							<p> James Warner </p>
+							<h4> Chief Justice </h4>
+							<p> Varsha Varghese </p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 
-		<div class="Hanszen" id="hanszen-college">
-			<h3>Hanszen College</h3>
-			<p>
-				In 1957 William V. Houston, Rice's second President, initiated the college system, making Hanszen College one of the four original colleges. The college took the name Hanszen in honor of Harry Clay Hanszen, a member of the Rice University Board of Governors from 1946-1950, and whose wealth came from his ventures in the oil industry. Though long ago Hanszen was known as the "Gentlemen's College" and "The Uncollege," we are now known as the "Family College," a reflection of the close and caring relations among its members. Our current Commons, built in 2002, is a beautiful modern space where you will experience hours of games, fun, and bonding. HFH!!
-			</p>
-			<p class="Magister" id="hanszen-magister">
-				<h4>Magisters</h4>
-				Fabiola Lopez-Duran & Carlos Martinez-Rivera
-			</p>
-			<p class="College-Coordinator" id="hanszen-college-coordinator">
-				<h4>College Coordinator</h4>
-				Joyce Bald
-			</p>
-			<p class="RA" id="hanszen-RAs">
-				<h4>Residential Associates</h4>
-				Alan Russell & Rebecca Russell
-				Diana Garcia Acero & Danny Garcia
-			</p>
-			<p class="President" id="hanszen-president">
-				<h4>President</h4>
-				Landon Mabe
-			</p>
-			<p class="CJ" id="hanszen-CJ">
-				<h4>Chief Justice</h4>
-				Nikhita Gangla 
-			</p>
+	<div class="divider"></div>
+
+	<div class="parallax" id="will-rice">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h1 class="display-3 college-name text-white"> <a id="willrice-web-link" class="college-web-link text-white" href="https://willrice.rice.edu/pages/home.html">Will Rice</a> <span class="text-center" style="font-size:18px;" id="willrice-web-prompt">Click to go to Will Rice's website!</span> </h1>
+					<img class="crest" src="res/images/willricecrest.png" alt="">
+					<div class="stats-box border mb-2 px-2" style="width: 25rem;">
+						<span class="align-top"> Will Ricers </span> <span class="stats" style="color:#b81212;"> 400 <i class="fas fa-users"></i> </span>
+					</div>
+					<div class="stats-box border px-2" style="width: 25rem;">
+						<span class="align-top"> Established </span> <span class="stats" style="color:#bd9e11;"> 1957 </span>
+					</div>
+				</div>
+				<div class="col text-center">
+					<div class="stats-box mt-2 px-2" style="color:#000;">
+						<p class="college-description">
+							The college of gods and goddesses. The only college to have ever swept (5 times!). Are you 
+							looking to get involved with Will Rice or just see what's happening next? We have around 25 
+							committees of which you could be a member! We have events nearly every week, ranging from 
+							food breaks to painting classes to Favorite Professor's Dinner.
+						</p>
+					</div>
+					<button class="btn btn-secondary btn-lg mt-2" id="willrice-info-toggle"> More Info... </button>
+					<div id="willrice-info">
+						<div class="stats-box mt-1 px-2 py-2" style="color:#000;">
+							<h3> Magisters </h3>
+							<p> Matthew & Rebekah Bennett </p>
+							<h3> College Coordinator </h3>
+							<p> Dale Thomas </p>
+							<h3> Resident Associates </h3>
+							<p> Sandy & Will Parsons <br> Jeremy & Chelsea Randall </p>
+							<h3> President </h3>
+							<p> Juliette Richert </p>
+							<h3> Chief Justice </h3>
+							<p> Jake Lesher </p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 
-		<div class="Wiess" id="wiess-college">
-			<h3>Wiess College</h3>
-			<p>
-				Wiess is Nice! Welcome to Team Family Wiess, where our focus on family and community shape every interaction. Founded in 1957, Wiess College is a constantly evolving environment, grounded by its history and traditions (which we define as anything that's done twice!). One of the things that makes Rice unique is its Residential College system and the opportunities for academic, social, and personal growth it provides. The relationships created within the W-shaped walls will last lifetimes, which can be seen through our strong Associate and Alumni network. Goldenrod covered Wiessmen(the gender-neutral term for members) help foster growth, friendship, and leadership within the most recognizable college on campus. TEAAAAMMM!! WIEEESSS!!
-			</p>
-			<p class="Magister" id="wiess-magister">
-				<h4>Magisters</h4>
-				Laura Schaefer & Andrew Schaefer
-			</p>
-			<p class="College-Coordinator" id="wiess-college-coordinator">
-				<h4>College Coordinator</h4>
-				Ewart Jones
-			</p>
-			<p class="RA" id="wiess-RAs">
-				<h4>Residential Associates</h4>
-				Carissa Zimmerman & Nick Espinosa
-				Esther Fernandez
-			</p>
-			<p class="President" id="wiess-president">
-				<h4>President</h4>
-				Timothy Thomas II
-			</p>
-			<p class="CJ" id="wiess-CJ">
-				<h4>Chief Justice</h4>
-				Drew Keefer
-			</p>
+	<div class="divider"></div>
+
+	<div class="parallax" id="hanszen">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h1 class="display-3 college-name"> <a id="hanszen-web-link" class="college-web-link" href="https://hanszen.rice.edu/">Hanszen</a> <span class="text-center" style="font-size:18px;" id="hanszen-web-prompt">Click to go to Hanszen's website!</span> </h1>
+					<img class="crest" src="res/images/hanszencrest.png" alt="">
+					<div class="stats-box border mb-2 px-2" style="width: 25rem;">
+						<span class="align-top"> Hanszenites </span> <span class="stats" style="color:#4169e1;"> 350 <i class="fas fa-users"></i> </span>
+					</div>
+					<div class="stats-box border px-2" style="width: 25rem;">
+						<span class="align-top"> Established </span> <span class="stats" style="color:#e6ed24;"> 1957 </span>
+					</div>
+				</div>
+				<div class="col text-center">
+					<div class="stats-box mt-2 px-2" style="color:#000;">
+						<p class="college-description">
+							In 1957 William V. Houston, Rice's second President, initiated the college system, making 
+							Hanszen College one of the four original colleges. The college took the name Hanszen in honor 
+							of Harry Clay Hanszen, a member of the Rice University Board of Governors from 1946-1950, and 
+							whose wealth came from his ventures in the oil industry. Though long ago Hanszen was known as 
+							the "Gentlemen's College" and "The Uncollege," we are now known as the "Family College," a 
+							reflection of the close and caring relations among its members. Our current Commons, built 
+							in 2002, is a beautiful modern space where you will experience hours of games, fun, and 
+							bonding. HFH!!
+						</p>
+					</div>
+					<button class="btn btn-secondary btn-lg mt-2" id="hanszen-info-toggle"> More Info... </button>
+					<div id="hanszen-info">
+						<div class="stats-box mt-1 px-2 py-2" style="color:#000;">
+							<h3> Magisters </h3>
+							<p> Fabiola Lopez-Duran & Carlos Martinez-Rivera </p>
+							<h3> College Coordinator </h3>
+							<p> Joyce Bald </p>
+							<h3> Resident Associates </h3>
+							<p> Alan Russell & Rebecca Russell <br> Diana Garcia Acero & Danny Garcia </p>
+							<h3> President </h3>
+							<p> Landon Mabe </p>
+							<h3> Chief Justice </h3>
+							<p> Nikhita Gangla </p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 
-		<div class="Jones" id="jones-college">
-			<h3>Jones College</h3>
-			<p>
-				Jones College was built as the first women's dormitory at Rice University. In the fall of 1980, Jones made a major change that would alter life at the college forever - it went co-ed! Since Jones became co-ed, Jones women have won the women's race a total of four times. Jones has a crazy amount of college spirit, and plenty of ways to get involved. JIBA!
-			</p>
-			<p class="Magister" id="jones-magister">
-				<h4>Magisters</h4>
-				Jason Hafner & Jennifer Trotter
-			</p>
-			<p class="College-Coordinator" id="jones-college-coordinator">
-				<h4>College Coordinator</h4>
-				Michelle Bennack
-			</p>
-			<p class="RA" id="jones-RAs">
-				<h4>Residential Associates</h4>
-				Ian Schimmel & Allison Leedie 
-				Kerri Barber
-			</p>
-			<p class="President" id="jones-president">
-				<h4>President</h4>
-				Kyle Bartsch
-			</p>
-			<p class="CJ" id="jones-CJ">
-				<h4>Chief Justice</h4>
-				John Townley 
-			</p>
+	<div class="divider"></div>
+
+	<div class="parallax" id="wiess">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h1 class="display-3 college-name"> <a id="wiess-web-link" class="college-web-link" href="http://www.teamwiess.com/">Wiess</a> <span class="text-center" style="font-size:18px;" id="wiess-web-prompt">Click to go to Wiess' website!</span> </h1>
+					<img class="crest" src="res/images/wiesscrest.png" alt="">
+					<div class="stats-box border mb-2 px-2" style="width: 25rem;">
+						<span class="align-top"> Wiessmen </span> <span class="stats" style="color:#daa520;"> 305 <i class="fas fa-users"></i> </span>
+					</div>
+					<div class="stats-box border px-2" style="width: 25rem;">
+						<span class="align-top"> Established </span> <span class="stats" style="color:#000;"> 1957 </span>
+					</div>
+				</div>
+				<div class="col text-center">
+					<div class="stats-box mt-2 px-2" style="color:#000;">
+						<p class="college-description">
+							Wiess is Nice! Welcome to Team Family Wiess, where our focus on family and community shape 
+							every interaction. Founded in 1957, Wiess College is a constantly evolving environment, 
+							grounded by its history and traditions (which we define as anything that's done twice!). 
+							One of the things that makes Rice unique is its Residential College system and the 
+							opportunities for academic, social, and personal growth it provides. The relationships 
+							created within the W-shaped walls will last lifetimes, which can be seen through our strong 
+							Associate and Alumni network. Goldenrod covered Wiessmen(the gender-neutral term for members) 
+							help foster growth, friendship, and leadership within the most recognizable college on campus. 
+							TEAAAAMMM!! WIEEESSS!!
+						</p>
+					</div>
+					<button class="btn btn-secondary btn-lg mt-2" id="wiess-info-toggle"> More Info... </button>
+					<div id="wiess-info">
+						<div class="stats-box mt-1 px-2 py-2" style="color:#000;">
+							<h3> Magisters </h3>
+							<p> Laura Schaefer & Andrew Schaefer </p>
+							<h3> College Coordinator </h3>
+							<p> Ewart Jones </p>
+							<h3> Resident Associates </h3>
+							<p> Carissa Zimmerman & Nick Espinosa <br> Diana Garcia Acero & Danny Garcia </p>
+							<h3> President </h3>
+							<p> Timothy Thomas II </p>
+							<h3> Chief Justice </h3>
+							<p> Drew Keefer </p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 
-		<div class="Brown" id="brown-college">
-			<h3>Brown College</h3>
-			<p>
-				Margaret Root Brown College was established in 1965 and prides itself on its strong community and culture of care. Its members, past and present, rally around Brown's strong traditions while not being afraid to make innovations of their own. One of the things that makes Rice unique is its Residential College system and the opportunities for academic, social, and personal growth it provides. Within Brown, students will make some of the closest relationships they will have during their Rice careers and develop connections with our extensive network of Associates and Alumni. Brown is not only a building, it is a platform that provides every student with opportunities for innovation, leadership, and creativity.
-			</p>
-			<p class="Magister" id="brown-magister">
-				<h4>Magisters</h4>
-				BJ & Shirley Fregly
-			</p>
-			<p class="College-Coordinator" id="brown-college-coordinator">
-				<h4>College Coordinator</h4>
-				Monica Gongora
-			</p>
-			<p class="RA" id="brown-RAs">
-				<h4>Residential Associates</h4>
-				Chris & Jaime Mize
-				Eleazar Marquez
-			</p>
-			<p class="President" id="brown-president">
-				<h4>President</h4>
-				Frances Williamson
-			</p>
-			<p class="CJ" id="brown-CJ">
-				<h4>Chief Justice</h4>
-				Charles Davis
-			</p>
+	<div class="divider"></div>
+
+	<div class="parallax" id="jones">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h1 class="display-3 college-name"> <a id="jones-web-link" class="college-web-link text-white" href="http://jones.rice.edu/">Jones</a> <span class="text-center" style="font-size:18px;" id="jones-web-prompt">Click to go to Jones' website!</span> </h1>
+					<img class="crest" src="res/images/jonescrest.jpg" alt="">
+					<div class="stats-box border mb-2 px-2" style="width: 25rem;">
+						<span class="align-top"> Jonesian </span> <span class="stats" style="color:#006605;"> 325 <i class="fas fa-users"></i> </span>
+					</div>
+					<div class="stats-box border px-2" style="width: 25rem;">
+						<span class="align-top"> Established </span> <span class="stats" style="color:#8800d1;"> 1957 </span>
+					</div>
+				</div>
+				<div class="col text-center">
+					<div class="stats-box mt-2 px-2" style="color:#000;">
+						<p class="college-description">
+							Jones College was built as the first women's dormitory at Rice University. In the fall of 
+							1980, Jones made a major change that would alter life at the college forever - it went co-ed! 
+							Since Jones became co-ed, Jones women have won the women's race a total of four times. Jones 
+							has a crazy amount of college spirit, and plenty of ways to get involved. JIBA!
+						</p>
+					</div>
+					<button class="btn btn-secondary btn-lg mt-2" id="jones-info-toggle"> More Info... </button>
+					<div id="jones-info">
+						<div class="stats-box mt-1 px-2 py-2" style="color:#000;">
+							<h3> Magisters </h3>
+							<p> Jason Hafner & Jennifer Trotter </p>
+							<h3> College Coordinator </h3>
+							<p> Michelle Bennack </p>
+							<h3> Resident Associates </h3>
+							<p> Ian Schimmel & Allison Leedie <br> Kerri Barber </p>
+							<h3> President </h3>
+							<p> Kyle Bartsch </p>
+							<h3> Chief Justice </h3>
+							<p> John Townley </p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 
-		<div class="Lovett" id="lovett-college">
-			<h3>Lovett College</h3>
-			<p>
-				Edgar Odell Lovett College is the seventh-founded residential college, named after the university's first president. Lovett opened in 1969 as an all-male college, becoming co-ed in 1980 when members of the college exchanged places with the female members of Jones College. Lovett's first class mostly comprised volunteers from other colleges. Lovett sponsors numerous community and social events throughout the year, including theater productions and the Lovett Undergraduate Research Symposium. Lovett's college crest is based upon the Lovat family crest although the Lovat family is not related to Edgar Odell Lovett.
-			</p>
-			<p class="Magister" id="lovett-magister">
-				<h4>Magisters</h4>
-				Mike Gustin & Denise Klein
-			</p>
-			<p class="College-Coordinator" id="lovett-college-coordinator">
-				<h4>College Coordinator</h4>
-				Sharon O'Leary
-			</p>
-			<p class="RA" id="lovett-RAs">
-				<h4>Residential Associates</h4>
-				Christopher Fagundes & Katie Fagundes
-				Laura Richardson & Geoffrey Riddle
-			</p>
-			<p class="President" id="lovett-president">
-				<h4>President</h4>
-				Chloe Oani
-			</p>
-			<p class="CJ" id="lovett-CJ">
-				<h4>Chief Justice</h4>
-				Laura Yordan
-			</p>
+	<div class="divider"></div>
+
+	<div class="parallax" id="brown">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h1 class="display-3 college-name text-white"> <a id="brown-web-link" class="college-web-link" href="https://www.browncollege.org/">Brown</a> <span class="text-center" style="font-size:18px;" id="brown-web-prompt">Click to go to Brown's website!</span> </h1>
+					<img class="crest" src="res/images/browncrest.jpg" alt="">
+					<div class="stats-box border mb-2 px-2" style="width: 25rem;">
+						<span class="align-top"> Brownies </span> <span class="stats" style="color:#800000;"> 353 <i class="fas fa-users"></i> </span>
+					</div>
+					<div class="stats-box border px-2" style="width: 25rem;">
+						<span class="align-top"> Established </span> <span class="stats" style="color:#ffdf00;"> 1965 </span>
+					</div>
+				</div>
+				<div class="col text-center">
+					<div class="stats-box mt-2 px-2" style="color:#000;">
+						<p class="college-description">
+							Margaret Root Brown College was established in 1965 and prides itself on its strong 
+							community and culture of care. Its members, past and present, rally around Brown's strong 
+							traditions while not being afraid to make innovations of their own. One of the things that 
+							makes Rice unique is its Residential College system and the opportunities for academic, 
+							social, and personal growth it provides. Within Brown, students will make some of the closest 
+							relationships they will have during their Rice careers and develop connections with our 
+							extensive network of Associates and Alumni. Brown is not only a building, it is a 
+							platform that provides every student with opportunities for innovation, leadership, 
+							and creativity.
+						</p>
+					</div>
+					<button class="btn btn-secondary btn-lg mt-2" id="brown-info-toggle"> More Info... </button>
+					<div id="brown-info">
+						<div class="stats-box mt-1 px-2 py-2" style="color:#000;">
+							<h3> Magisters </h3>
+							<p> BJ & Shirley Fregly </p>
+							<h3> College Coordinator </h3>
+							<p> Monica Gongora </p>
+							<h3> Resident Associates </h3>
+							<p> Chris & Jaime Mize <br> Eleazar Marquez </p>
+							<h3> President </h3>
+							<p> Frances Williamson </p>
+							<h3> Chief Justice </h3>
+							<p> Charles Davis </p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 
-		<div class="Sid-Richardson" id="sid-richardson-college">
-			<h3>Sid Richardson College</h3>
-			<p>
-				Sid Richardson College (also referred to as Sid, SRC, or Sid Rich) opened in 1971 as a men's residential college. Like the other residential colleges on the Rice campus, Sid Richardson College provides undergraduate residential and dining facilities, social organizations and student government, as well as faculty, alumni, and community associates. A $2 million pledge from the Sid Richardson Foundation, which was established by Texas oilman, cattleman, and philanthropist Sid W. Richardson (1891 - 1959), funded the construction of the college. The college became co-ed in 1987. Members of Sid Richardson College are called Sidizens.
-			</p>
-			<p class="Magister" id="sid-richardson-magister">
-				<h4>Magisters</h4>
-				Michel & Melanie Achard
-			</p>
-			<p class="College-Coordinator" id="sid-richardson-college-coordinator">
-				<h4>College Coordinator</h4>
-				Lisa Galloy
-			</p>
-			<p class="RA" id="sid-richardson-RAs">
-				<h4>Residential Associates</h4>
-				Lesa Tran Lu & Eric Lu
-				William Edmond
-			</p>
-			<p class="President" id="sid-richardson-president">
-				<h4>President</h4>
-				McKinzie Chambers
-			</p>
-			<p class="CJ" id="sid-richardson-CJ">
-				<h4>Chief Justice</h4>
-				Jared Aiman
-			</p>
+	<div class="divider"></div>
+
+	<div class="parallax" id="lovett">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h1 class="display-3 college-name text-white"> <a id="lovett-web-link" class="college-web-link" href="https://lovettcollege.github.io/lovettcollege/">Lovett</a> <span class="text-center" style="font-size:18px;" id="lovett-web-prompt">Click to go to Lovett's website!</span> </h1>
+					<img class="crest" src="res/images/lovettcrest.jpg" alt="">
+					<div class="stats-box border mb-2 px-2" style="width: 25rem;">
+						<span class="align-top"> Lovetteers </span> <span class="stats" style="color:#000080;"> 375 <i class="fas fa-users"></i> </span>
+					</div>
+					<div class="stats-box border px-2" style="width: 25rem;">
+						<span class="align-top"> Established </span> <span class="stats" style="color:#e6ed24;"> 1968 </span>
+					</div>
+				</div>
+				<div class="col text-center">
+					<div class="stats-box mt-2 px-2" style="color:#000;">
+						<p class="college-description">
+							Edgar Odell Lovett College is the seventh-founded residential college, named after the 
+							university's first president. Lovett opened in 1969 as an all-male college, becoming 
+							co-ed in 1980 when members of the college exchanged places with the female members of 
+							Jones College. Lovett's first class mostly comprised volunteers from other colleges. 
+							Lovett sponsors numerous community and social events throughout the year, including theater 
+							productions and the Lovett Undergraduate Research Symposium. Lovett's college crest is based 
+							upon the Lovat family crest although the Lovat family is not related to Edgar Odell Lovett.
+						</p>
+					</div>
+					<button class="btn btn-secondary btn-lg mt-2" id="lovett-info-toggle"> More Info... </button>
+					<div id="lovett-info">
+						<div class="stats-box mt-1 px-2 py-2" style="color:#000;">
+							<h3> Magisters </h3>
+							<p> Mike Gustin & Denise Klein </p>
+							<h3> College Coordinator </h3>
+							<p> Sharon O'Leary </p>
+							<h3> Resident Associates </h3>
+							<p> Christopher Fagundes & Katie Fagundes <br> Laura Richardson & Geoffrey Riddle </p>
+							<h3> President </h3>
+							<p> Chloe Oani </p>
+							<h3> Chief Justice </h3>
+							<p> Laura Yordan </p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 
-		<div class="Martel" id="martel-college">
-			<h3>Martel College</h3>
-			<p>
-				Welcome to the Best College Ever -- Martel College! This is the 9th residential college in the Rice University residential college system. Included here are all events and programs organized by Martel College's student government. These include programs created by the committees, the class representatives, the Executive Council, and more! 
-			</p>
-			<p class="Magister" id="martel-magister">
-				<h4>Magisters</h4>
-				Frank Toffoletto & Carrie Toffoletto
-			</p>
-			<p class="College-Coordinator" id="martel-college-coordinator">
-				<h4>College Coordinator</h4>
-				Bonnie Stroman
-			</p>
-			<p class="RA" id="martel-RAs">
-				<h4>Residential Associates</h4>
-				Ben Stevenson & Taylor Cooper
-				Norma Santamaria
-			</p>
-			<p class="President" id="martel-president">
-				<h4>President</h4>
-				Anna Margaret Clyburn
-			</p>
-			<p class="CJ" id="martel-CJ">
-				<h4>Chief Justice</h4>
-				Kyle Dickens
-			</p>
+	<div class="divider"></div>
+
+	<div class="parallax" id="sid-rich">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h1 class="display-3 college-name text-white"> <a id="sidrich-web-link" class="college-web-link text-white" href="https://sidrich.rice.edu/">Sid Richardson</a> <span class="text-center" style="font-size:18px;" id="sidrich-web-prompt">Click to go to Sid's website!</span> </h1>
+					<img class="crest" src="res/images/sidcrest.png" alt="">
+					<div class="stats-box border mb-2 px-2" style="width: 25rem;">
+						<span class="align-top"> Sidizens </span> <span class="stats" style="color:#f00;"> 332 <i class="fas fa-users"></i> </span>
+					</div>
+					<div class="stats-box border px-2" style="width: 25rem;">
+						<span class="align-top"> Established </span> <span class="stats" style="color:#daa520;"> 1971 </span>
+					</div>
+				</div>
+				<div class="col text-center">
+					<div class="stats-box mt-2 px-2" style="color:#000;">
+						<p class="college-description">
+							Sid Richardson College (also referred to as Sid, SRC, or Sid Rich) opened in 1971 
+							as a men's residential college. Like the other residential colleges on the Rice 
+							campus, Sid Richardson College provides undergraduate residential and dining facilities, 
+							social organizations and student government, as well as faculty, alumni, and community 
+							associates. A $2 million pledge from the Sid Richardson Foundation, which was established 
+							by Texas oilman, cattleman, and philanthropist Sid W. Richardson (1891 - 1959), funded the 
+							construction of the college. The college became co-ed in 1987. Members of Sid Richardson 
+							College are called Sidizens.
+						</p>
+					</div>
+					<button class="btn btn-secondary btn-lg mt-2" id="sidrich-info-toggle"> More Info... </button>
+					<div id="sidrich-info">
+						<div class="stats-box mt-1 px-2 py-2" style="color:#000;">
+							<h3> Magisters </h3>
+							<p> Michel & Melanie Achard </p>
+							<h3> College Coordinator </h3>
+							<p> Lisa Galloy </p>
+							<h3> Resident Associates </h3>
+							<p> Lesa Tran Lu & Eric Lu <br> William Edmond </p>
+							<h3> President </h3>
+							<p> McKinzie Chambers </p>
+							<h3> Chief Justice </h3>
+							<p> Jared Aiman </p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 
-		<div class="McMurtry" id="mcmurtry-college">
-			<h3>McMurtry College</h3>
-			<p>
-				McMurtry College is the 10th residential college to grace the Rice University campus. A LEED Gold certified building located on the northeastern edge of campus, it sits at the optimal location for those seeking the shortest path between their dorms and some of the most popular locations on campus, such as the academic quad (home to many buildings in which students will most likely have classes), Duncan Hall (for all things engineering), and the West Servery (the best place to eat at Rice).
-			</p>
-			<p class="Magister" id="mcmurtry-magister">
-				<h4>Magisters</h4>
-				Margaret Beier & Chris Stickney
-			</p>
-			<p class="College-Coordinator" id="mcmurtry-college-coordinator">
-				<h4>College Coordinator</h4>
-				Jackie Carrizales
-			</p>
-			<p class="RA" id="mcmurtry-RAs">
-				<h4>Residential Associates</h4>
-				Brian Gibson & Alana Lemay-Gibson
-				Deirdre Hunter
-				Tamara Cobb
-			</p>
-			<p class="President" id="mcmurtry-president">
-				<h4>President</h4>
-				Joyce Chen
-			</p>
-			<p class="CJ" id="mcmurtry-CJ">
-				<h4>Chief Justice</h4>
-				Augi Liebster
-			</p>
+	<div class="divider"></div>
+
+	<div class="parallax" id="martel">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h1 class="display-3 college-name text-white"> <a id="martel-web-link" class="college-web-link text-white" href="http://www.martel.rice.edu/">Martel</a> <span class="text-center" style="font-size:18px;" id="martel-web-prompt">Click to go to Martel's website!</span> </h1>
+					<img class="crest" src="res/images/martelcrest.jpg" alt="">
+					<div class="stats-box border mb-2 px-2" style="width: 25rem;">
+						<span class="align-top"> Martelians </span> <span class="stats" style="color:#007fff;"> 350 <i class="fas fa-users"></i> </span>
+					</div>
+					<div class="stats-box border px-2" style="width: 25rem;">
+						<span class="align-top"> Established </span> <span class="stats" style="color:#800000;"> 2002 </span>
+					</div>
+				</div>
+				<div class="col text-center">
+					<div class="stats-box mt-2 px-2" style="color:#000;">
+						<p class="college-description">
+							Welcome to the Best College Ever -- Martel College! This is the 9th residential college in 
+							the Rice University residential college system. Included here are all events and programs 
+							organized by Martel College's student government. These include programs created by the 
+							committees, the class representatives, the Executive Council, and more! 
+						</p>
+					</div>
+					<button class="btn btn-secondary btn-lg mt-2" id="martel-info-toggle"> More Info... </button>
+					<div id="martel-info">
+						<div class="stats-box mt-1 px-2 py-2" style="color:#000;">
+							<h3> Magisters </h3>
+							<p> Frank Toffoletto & Carrie Toffoletto </p>
+							<h3> College Coordinator </h3>
+							<p> Bonnie Stroman </p>
+							<h3> Resident Associates </h3>
+							<p> Ben Stevenson & Taylor Cooper <br> Norma Santamaria </p>
+							<h3> President </h3>
+							<p> Anna Margaret Clyburn </p>
+							<h3> Chief Justice </h3>
+							<p> Kyle Dickens </p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 
-		<div class="Duncan" id="duncan-college">
-			<h3>Duncan College</h3>
-			<p>
-				Duncan College, Rice University's eleventh residential college, is named to commemorate Charles William Duncan, Jr., who was U.S. Secretary of Energy on the Cabinet of President Jimmy Carter and former chairman of Rice Board of Governors, and his wife, Anne. The Duncans have a passion for environmental sustainability which was the motivation behind designing Duncan as Rice's "green" college. As such, Duncan is one of the first buildings in Houston to receive LEED (Leadership in Energy and Environmental Design) Gold Certification.
-			</p>
-			<p class="Magister" id="duncan-magister">
-				<h4>Magisters</h4>
-				Caleb McDaniel & Brandy McDaniel
-			</p>
-			<p class="College-Coordinator" id="duncan-college-coordinator">
-				<h4>College Coordinator</h4>
-				Vicki Woods
-			</p>
-			<p class="RA" id="duncan-RAs">
-				<h4>Residential Associates</h4>
-				Jenifer Bratter & Noe Perez
-				Bojan Szumanski & Magdalena Pamula
-				Courtney Stefancyk & Myron Clemence
-			</p>
-			<p class="President" id="duncan-president">
-				<h4>President</h4>
-				Louis Cole
-			</p>
-			<p class="CJ" id="duncan-CJ">
-				<h4>Chief Justice</h4>
-				Ben Harris
-			</p>
+	<div class="divider"></div>
+
+	<div class="parallax" id="mcmurtry">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h1 class="display-3 college-name text-white"> <a id="mcmurtry-web-link" class="college-web-link text-white" href="https://mcmurtry.rice.edu/">McMurtry</a> <span class="text-center" style="font-size:18px;" id="mcmurtry-web-prompt">Click to go to McMurtry's website!</span> </h1>
+					<img class="crest" src="res/images/murtcrest.svg" alt="">
+					<div class="stats-box border mb-2 px-2" style="width: 25rem;">
+						<span class="align-top"> Murts </span> <span class="stats" style="color:#7851a9;"> 420 <i class="fas fa-users"></i> </span>
+					</div>
+					<div class="stats-box border px-2" style="width: 25rem;">
+						<span class="align-top"> Established </span> <span class="stats" style="color:#c0c0c0;"> 2009 </span>
+					</div>
+				</div>
+				<div class="col text-center">
+					<div class="stats-box mt-2 px-2" style="color:#000;">
+						<p class="college-description">
+							McMurtry College is the 10th residential college to grace the Rice University campus. 
+							A LEED Gold certified building located on the northeastern edge of campus, it sits at 
+							the optimal location for those seeking the shortest path between their dorms and some 
+							of the most popular locations on campus, such as the academic quad (home to many buildings 
+							in which students will most likely have classes), Duncan Hall (for all things engineering), 
+							and the West Servery (the best place to eat at Rice).
+						</p>
+					</div>
+					<button class="btn btn-secondary btn-lg mt-2" id="mcmurtry-info-toggle"> More Info... </button>
+					<div id="mcmurtry-info">
+						<div class="stats-box mt-1 px-2 py-2" style="color:#000;">
+							<h3> Magisters </h3>
+							<p> Margaret Beier & Chris Stickney </p>
+							<h3> College Coordinator </h3>
+							<p> Jackie Carrizales </p>
+							<h3> Resident Associates </h3>
+							<p> Brian Gibson & Alana Lemay-Gibson <br> Deirdre Hunter <br> Tamara Cobb </p>
+							<h3> President </h3>
+							<p> Joyce Chen </p>
+							<h3> Chief Justice </h3>
+							<p> Augi Liebster </p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 
+	<div class="divider"></div>
 
-	</section>
+	<div class="parallax" id="duncan">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h1 class="display-3 college-name text-white"> <a id="duncan-web-link" class="college-web-link text-white" href="https://duncan.rice.edu/">Duncan</a> <span class="text-center" style="font-size:18px;" id="duncan-web-prompt">Click to go to Duncan's website!</span> </h1>
+					<img class="crest" src="res/images/duncancrest.png" alt="">
+					<div class="stats-box border mb-2 px-2" style="width: 25rem;">
+						<span class="align-top"> Duncaroos </span> <span class="stats" style="color:#228b22;"> 420 <i class="fas fa-users"></i> </span>
+					</div>
+					<div class="stats-box border px-2" style="width: 25rem;">
+						<span class="align-top"> Established </span> <span class="stats" style="color:#daa520;"> 2009 </span>
+					</div>
+				</div>
+				<div class="col text-center">
+					<div class="stats-box mt-2 px-2" style="color:#000;">
+						<p class="college-description">
+							Duncan College, Rice University's eleventh residential college, is named to 
+							commemorate Charles William Duncan, Jr., who was U.S. Secretary of Energy on the 
+							Cabinet of President Jimmy Carter and former chairman of Rice Board of Governors, 
+							and his wife, Anne. The Duncans have a passion for environmental sustainability 
+							which was the motivation behind designing Duncan as Rice's "green" college. As 
+							such, Duncan is one of the first buildings in Houston to receive LEED (Leadership in 
+							Energy and Environmental Design) Gold Certification.
+						</p>
+					</div>
+					<button class="btn btn-secondary btn-lg mt-2" id="duncan-info-toggle"> More Info... </button>
+					<div id="duncan-info">
+						<div class="stats-box mt-1 px-2 py-2" style="color:#000;">
+							<h3> Magisters </h3>
+							<p> Caleb & Brandy McDaniel </p>
+							<h3> College Coordinator </h3>
+							<p> Vicki Woods </p>
+							<h3> Resident Associates </h3>
+							<p> Jenifer Bratter & Noe Perez <br> Bojan Szumanski & Magdalena Pamula <br> Courtney Stefancyk & Myron Clemence </p>
+							<h3> President </h3>
+							<p> Louis Cole </p>
+							<h3> Chief Justice </h3>
+							<p> Ben Harris </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<div class="divider"><hr /></div>
+
+	<div class="footer mb-4">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<img src="https://dou.rice.edu/sites/all/themes/custom/ricestark/images/rice-logo-alt.jpg" height=50 alt="">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col" style="font-size:.75em;">
+					6100 Main St., Houston, TX 77005-1827 <br />
+					Mailing Address: P.O. Box 1892 Houston, TX 77251-1892 <br />
+					713-348-0000
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

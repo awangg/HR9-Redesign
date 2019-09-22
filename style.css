@@ -1,36 +1,395 @@
-h1 {
-	font-weight: 900;
-	font-size: 3em;
-	background: blue;
-	color: white;
-	text-align: center;
+/* Nav */
+nav {
+	background-color: #0b13a1;
 }
 
-h3 {
-	font-size: 1.5em;
+.nav-item {
 	text-align: center;
-	color: red;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.5rem;
+	padding-right: 1em;
+	padding-left: 1em;
 }
 
-.summary {
-	background-image: url(images/rice.jpg_fit=scale);
+.nav-item:hover {
+	background-color: #fff;
+	color: #0b13a1;
+}
+
+/* Parallax Images */
+.parallax {
+	padding-top: 3em;
+	min-height: 60em;
+	background-attachment: fixed;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-.Magister {
-	color: blue;
+/* Top Introduction */
+.top-info {
+	width: 50%;
 }
 
-.Hanszen:hover {
-	background: blue;
-	color: yellow;
+/* Top Buttons */
+/* Default */
+#college-assign-content,
+#college-magister-content,
+#res-assoc-content,
+#college-coord-content {
+	display: none;
 }
 
-.Wiess:hover {
-	background: #FAD043;
+/* Focused College Assign */
+#toggle-college-assign:focus ~ #college-assign-content {
+	display: block;
 }
 
-#jones-college {
-	color: green;
+#toggle-college-assign:focus ~ #college-magister-content,
+#toggle-college-assign:focus ~ #res-assoc-content,
+#toggle-college-assign:focus ~ #college-coord-content,
+#toggle-college-assign:focus ~ #reg-intro {
+	display: none;
+}
+
+/* Focused College Magister */
+#toggle-college-magister:focus ~ #college-magister-content {
+	display: block;
+}
+
+#toggle-college-magister:focus ~ #college-assign-content,
+#toggle-college-magister:focus ~ #res-assoc-content,
+#toggle-college-magister:focus ~ #college-coord-content,
+#toggle-college-magister:focus ~ #reg-intro {
+	display: none;
+}
+
+/* Focused Res Assoc */
+#toggle-res-assoc:focus ~ #res-assoc-content {
+	display: block;
+}
+
+#toggle-res-assoc:focus ~ #college-assign-content,
+#toggle-res-assoc:focus ~ #college-magister-content,
+#toggle-res-assoc:focus ~ #college-coord-content,
+#toggle-res-assoc:focus ~ #reg-intro {
+	display: none;
+}
+
+/* Focused College Coord */
+#toggle-college-coord:focus ~ #college-coord-content {
+	display: block;
+}
+
+#toggle-college-coord:focus ~ #college-assign-content,
+#toggle-college-coord:focus ~ #college-magister-content,
+#toggle-college-coord:focus ~ #res-assoc-content,
+#toggle-college-coord:focus ~ #reg-intro {
+	display: none;
+}
+
+/* College Information */
+.card {
+	opacity: .9;
+}
+
+.card-body {
+	color: #000;
+}
+
+.college-name {
+	text-shadow: 2px 2px 8px black;
+}
+
+.college-web-link {
+	color: #000;
+}
+
+.college-web-link:hover {
+	text-decoration: none;
+}
+
+.stats-box {
+	background-color: #fff;
+	opacity: .8;
+	border-radius: 4px;
+}
+
+.stats {
+	font-size: 5rem;
+}
+
+.crest {
+	background-color: #fff;
+	height: 20em;
+	width: 20em;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);;
+}
+
+.college-description {
+	font-size: 1.2em;
+}
+
+.divider {
+	background-color: #fff;
+	height: 3em;
+	text-align: center;
+}
+
+/* College Specific Buttons */
+#baker-info-toggle {
+	background-color: #b81212;
+	border-color: #b81212;
+}
+
+#baker-info-toggle:hover {
+	background-color: #b3b9c4;
+	border-color: #b3b9c4;
+}
+
+#willrice-info-toggle {
+	background-color: #b81212;
+	border-color: #b81212;
+}
+
+#willrice-info-toggle:hover {
+	background-color: #bd9e11;
+	border-color: #bd9e11;
+}
+
+#hanszen-info-toggle {
+	background-color: #4169e1;
+	border-color: #4169e1;
+}
+
+#hanszen-info-toggle:hover {
+	background-color: #e6ed24;
+	border-color: #e6ed24;
+}
+
+#wiess-info-toggle {
+	background-color: #daa520;
+	border-color: #daa520;
+}
+
+#wiess-info-toggle:hover {
+	background-color: #000;
+	border-color: #000;
+}
+
+#jones-info-toggle {
+	background-color: #006605;
+	border-color: #006605;
+}
+
+#jones-info-toggle:hover {
+	background-color: #8800d1;
+	border-color: #8800d1;
+}
+
+#brown-info-toggle {
+	background-color: #800000;
+	border-color: #800000;
+}
+
+#brown-info-toggle:hover {
+	background-color: #ffdf00;
+	border-color: #ffdf00;
+}
+
+#lovett-info-toggle {
+	background-color: #000080;
+	border-color: #000080;
+}
+
+#lovett-info-toggle:hover {
+	background-color: #e6ed24;
+	border-color: #e6ed24;
+}
+
+#sidrich-info-toggle {
+	background-color: #f00;
+	border-color: #f00;
+}
+
+#sidrich-info-toggle:hover {
+	background-color: #daa520;
+	border-color: #daa520;
+}
+
+#martel-info-toggle {
+	background-color: #007fff;
+	border-color: #007fff;
+}
+
+#martel-info-toggle:hover {
+	background-color: #800000;
+	border-color: #800000;
+}
+
+#mcmurtry-info-toggle {
+	background-color: #7851a9;
+	border-color: #7851a9;
+}
+
+#mcmurtry-info-toggle:hover {
+	background-color: #c0c0c0;
+	border-color: #c0c0c0;
+}
+
+#duncan-info-toggle {
+	background-color: #228b22;
+	border-color: #228b22;
+}
+
+#duncan-info-toggle:hover {
+	background-color: #daa520;
+	border-color: #daa520;
+}
+
+/* College Specific Info */
+#baker-info,
+#baker-web-prompt,
+#willrice-info,
+#willrice-web-prompt,
+#hanszen-info,
+#hanszen-web-prompt,
+#wiess-info,
+#wiess-web-prompt,
+#jones-info,
+#jones-web-prompt,
+#brown-info,
+#brown-web-prompt,
+#lovett-info,
+#lovett-web-prompt,
+#sidrich-info,
+#sidrich-web-prompt,
+#martel-info,
+#martel-web-prompt,
+#mcmurtry-info,
+#mcmurtry-web-prompt,
+#duncan-info,
+#duncan-web-prompt {
+	display: none;
+}
+
+/* College Specific Links */
+#baker-web-link:hover {
+	color: #b81212;
+}
+
+#willrice-web-link:hover {
+	color: #bd9e11;
+}
+
+#hanszen-web-link:hover {
+	color: #4169e1;
+}
+
+#wiess-web-link:hover {
+	color: #daa520;
+}
+
+#jones-web-link:hover {
+	color: #006605;
+}
+
+#brown-web-link:hover {
+	color: #800000;
+}
+
+#lovett-web-link:hover {
+	color: #000080;
+}
+
+#sidrich-web-link:hover {
+	color: #f00;
+}
+
+#martel-web-link:hover {
+	color: #007fff;
+}
+
+#mcmurtry-web-link:hover {
+	color: #7851a9;
+}
+
+#duncan-web-link:hover {
+	color: #228b22;
+}
+
+#baker-info-toggle:focus + #baker-info,
+#baker-web-link:hover + #baker-web-prompt,
+#willrice-info-toggle:focus + #willrice-info,
+#willrice-web-link:hover + #willrice-web-prompt,
+#hanszen-info-toggle:focus + #hanszen-info,
+#hanszen-web-link:hover + #hanszen-web-prompt,
+#wiess-info-toggle:focus + #wiess-info,
+#wiess-web-link:hover + #wiess-web-prompt,
+#jones-info-toggle:focus + #jones-info,
+#jones-web-link:hover + #jones-web-prompt,
+#brown-info-toggle:focus + #brown-info,
+#brown-web-link:hover + #brown-web-prompt,
+#lovett-info-toggle:focus + #lovett-info,
+#lovett-web-link:hover + #lovett-web-prompt,
+#sidrich-info-toggle:focus + #sidrich-info,
+#sidrich-web-link:hover + #sidrich-web-prompt,
+#martel-info-toggle:focus + #martel-info,
+#martel-web-link:hover + #martel-web-prompt,
+#mcmurtry-info-toggle:focus + #mcmurtry-info,
+#mcmurtry-web-link:hover + #mcmurtry-web-prompt,
+#duncan-info-toggle:focus + #duncan-info,
+#duncan-web-link:hover + #duncan-web-prompt {
+	display: block;
+}
+
+/* College Specific Images */
+#rice {
+	background-image: url('./res/images/sallyport.jpg');
+}
+
+#baker {
+	background-image: url('./res/images/baker.jpg');
+}
+
+#will-rice {
+	background-image: url('./res/images/willrice.jpg');
+}
+
+#hanszen {
+	background-image: url('./res/images/hanszen.jpg');
+}
+
+#wiess {
+	background-image: url('./res/images/wiess.jpg');
+}
+
+#jones {
+	background-image: url('./res/images/jones.png');
+}
+
+#brown {
+	background-image: url('./res/images/brown.jpeg');
+}
+
+#lovett {
+	background-image: url('./res/images/lovett.jpg');
+}
+
+#sid-rich {
+	background-image: url('./res/images/sidrich.jpg');
+}
+
+#martel {
+	background-image: url('./res/images/martel.jpg');
+}
+
+#mcmurtry {
+	background-image: url('./res/images/mcmurtry.jpg');
+}
+
+#duncan {
+	background-image: url('./res/images/duncan.jpg');
 }
