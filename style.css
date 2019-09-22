@@ -1,13 +1,4 @@
-html,
-body {
-	background-image: url('./res/images/sallyport.jpg');
-	height: 100%;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
+/* Nav */
 nav {
 	background-color: #0b13a1;
 }
@@ -26,6 +17,154 @@ nav {
 	color: #0b13a1;
 }
 
+/* Parallax Images */
+.parallax {
+	padding-top: 5em;
+	min-height: 60em;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Top Introduction */
 #res-intro {
-	margin-top: 10rem;
+	width: 50%;
+}
+
+/* Sliding Banner Links */
+.banner-link {
+	background-color: #f00;
+	opacity: .7;
+}
+
+/* College Information */
+.card {
+	opacity: .9;
+}
+
+.card-body {
+	color: #000;
+}
+
+.college-name {
+	text-shadow: 2px 2px 8px black;
+}
+
+.college-web-link {
+	color: #000;
+}
+
+.college-web-link:hover {
+	text-decoration: none;
+}
+
+.stats-box {
+	background-color: #fff;
+	opacity: .8;
+	border-radius: 4px;
+}
+
+.stats {
+	font-size: 5rem;
+}
+
+.crest {
+	background-color: #fff;
+	height: 20em;
+	width: 20em;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);;
+}
+
+.college-description {
+	font-size: 1.5em;
+}
+
+.divider {
+	background-color: #fff;
+	height: 3em;
+	text-align: center;
+}
+
+/* College Specific Buttons */
+#baker-info-toggle {
+	background-color: #b81212;
+	border-color: #b81212;
+}
+
+#baker-info-toggle:hover {
+	background-color: #bd9e11;
+	border-color: #bd9e11;
+}
+
+/* College Specific Info */
+#baker-info {
+	display: none;
+}
+
+#baker-web-prompt {
+	display: none;
+}
+
+/* College Specific Links */
+#baker-web-link:hover {
+	color: #b81212;
+}
+
+#baker-info-toggle:hover + #baker-info {
+	display: block;
+}
+
+#baker-web-link:hover + #baker-web-prompt {
+	display: block;
+}
+
+/* College Specific Images */
+#rice {
+	background-image: url('./res/images/sallyport.jpg');
+}
+
+#baker {
+	background-image: url('./res/images/baker.jpg');
+}
+
+#will-rice {
+	background-image: url('./res/images/willrice.jpg');
+}
+
+#hanszen {
+	background-image: url('./res/images/hanszen.jpg');
+}
+
+#wiess {
+	background-image: url('./res/images/wiess.jpg');
+}
+
+#jones {
+	background-image: url('./res/images/jones.png');
+}
+
+#brown {
+	background-image: url('./res/images/brown.jpeg');
+}
+
+#lovett {
+	background-image: url('./res/images/lovett.jpg');
+}
+
+#sid-rich {
+	background-image: url('./res/images/sidrich.jpg');
+}
+
+#martel {
+	background-image: url('./res/images/martel.jpg');
+}
+
+#mcmurtry {
+	background-image: url('./res/images/mcmurtry.jpg');
+}
+
+#duncan {
+	background-image: url('./res/images/duncan.jpg');
 }
