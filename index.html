@@ -61,38 +61,154 @@
 		<div class="container">
 			<div class="pb-1 mb-4" style="background-color:#fff;opacity:.7;"> <h1 class="display-3 text-center mb-4"> The Residential College System </h1> </div>
 			
-			<div class="row mb-4 text-center">
-				<div class="col">
-					<button class="btn btn-primary topInfo animated bounceIn">College Assignments</button>
-				</div>
-				<div class="col">
-					<button class="btn btn-primary topInfo animated bounceIn">College Magisters</button>
-				</div>
-				<div class="col">
-					<button class="btn btn-primary topInfo animated bounceIn">Residential Associates</button>
-				</div>
-				<div class="col">
-					<button class="btn btn-primary topInfo animated bounceIn">College Coordinators</button>
-				</div>
-				<div class="col">
-					<button class="btn btn-primary topInfo animated bounceIn">Associates Program</button>
-				</div>
-			</div>
-			
-			<div id="res-intro" class="card mx-auto">
-				<div class="card-body">
-					<p>
-						Undergraduate life at Rice University differs from that at many universities because of Rice's tradition of residential colleges. Before matriculating, each of the university's undergraduates becomes a member of one of 11 residential colleges, which have their own dining halls, public rooms, and dorms on campus; most of the first-year students and about 75 percent of all undergraduates reside at their associated colleges. 
-					</p>
-					<p>
-						Because each student is randomly assigned to one of the colleges, and maintains membership in the same college throughout their undergraduate years, the colleges are enriched by the diversity of their students' backgrounds, academic interests and experiences, talents, and goals. 
-					</p>
-					<p>
-						A faculty magister, who is assigned to each college and lives in an adjacent house, helps cultivate a variety of cultural and intellectual interests among the students, as well as supporting an effective system of self-government. Other faculty or members of the community serve as associates to individual colleges. 
-					</p>
-					<p>
-						The experience of college residence is indispensable to conveying the rich flavor of academic life at Rice, allowing students to combine their usual studies with an array of social events, intramural sports, student plays, lecture series, innovative college-designed courses, and an active role in student government.
-					</p>
+			<div class="row mb-4">
+				<div class="col text-center">
+					<button id="toggle-college-assign" class="btn btn-lg btn-primary animated bounceIn mb-2">College Assignments</button>
+					<button id="toggle-college-magister" class="btn btn-lg btn-primary animated bounceIn mb-2">College Magisters</button>
+					<button id="toggle-res-assoc" class="btn btn-lg btn-primary animated bounceIn mb-2">Residential Associates</button>
+					<button id="toggle-college-coord" class="btn btn-lg btn-primary animated bounceIn mb-2">College Coordinators</button>
+					<a class="btn btn-lg btn-primary animated bounceIn mb-2" href="http://associatesprogram.rice.edu/">Associates Program</a>
+					<div id="reg-intro" class="card mx-auto top-info">
+						<div class="card-body">
+							<p>
+								Undergraduate life at Rice University differs from that at many universities because of Rice's 
+								tradition of residential colleges. Before matriculating, each of the university's undergraduates 
+								becomes a member of one of 11 residential colleges, which have their own dining halls, 
+								public rooms, and dorms on campus; most of the first-year students and about 75 percent of 
+								all undergraduates reside at their associated colleges. 
+							</p>
+							<p>
+								Because each student is randomly assigned to one of the colleges, and maintains membership in 
+								the same college throughout their undergraduate years, the colleges are enriched by the 
+								diversity of their students' backgrounds, academic interests and experiences, talents, and goals. 
+							</p>
+							<p>
+								A faculty magister, who is assigned to each college and lives in an adjacent house, helps 
+								cultivate a variety of cultural and intellectual interests among the students, as well as 
+								supporting an effective system of self-government. Other faculty or members of the community 
+								serve as associates to individual colleges. 
+							</p>
+							<p>
+								The experience of college residence is indispensable to conveying the rich flavor of academic 
+								life at Rice, allowing students to combine their usual studies with an array of social events, 
+								intramural sports, student plays, lecture series, innovative college-designed courses, and an 
+								active role in student government.
+							</p>
+						</div>
+					</div>
+					<div id="college-assign-content" class="card mx-auto top-info">
+						<div class="card-body">
+							<p>
+								Rice University houses students in 11 residential colleges: Baker, Will Rice, Hanszen, Wiess, 
+								Jones, Brown, Lovett, Sid Richardson, Martel, McMurtry, and Duncan.  Students are randomly 
+								assigned to colleges; however, great care is taken to ensure that majors, ethnicities, 
+								hometowns, home states, high schools, genders, and athletes, are assigned as evenly as 
+								possible among the colleges.  Thus, only the first two of a group of three of more students 
+								from the same hometown and high school requesting to be roommates and be assigned to the same 
+								college will be honored.  
+							</p>
+							<p>
+								Students are given the option of either requesting to room with a specific incoming student 
+								OR be assigned to the same college as a particular incoming student.  Please be aware that 
+								both students MUST make the same request in writing by the stated deadline.  Unless there 
+								is an immediate family legacy (mother, father, sister, or brother) within a college, 
+								students cannot request to be assigned to a specific college. Students with documented 
+								disabilities must complete the disability accommodations process, so that Disability Support 
+								Services can request an assignment conducive to the specific mobility and accessibility needs.
+							</p>
+							<p style="text-decoration:underline;">
+								Notification of college assignments are mailed via US Mail on July 7th, or the next business day, 
+								should the 7th falls on a weekend. 
+							</p>
+						</div>
+					</div>
+					<div id="college-magister-content" class="card mx-auto top-info">
+						<div class="card-body">
+							<p>
+								College Magisters are tenured faculty members who live, with their families, in houses 
+								adjacent to each college.  Magisters are a supportive resource for students and oversee 
+								all aspects of student life. They encourage broad cultural and intellectual pursuits, ensure 
+								the effectiveness of the college's self-governance, and care for their students' wellbeing. 
+								College Magisters serve as advisors and confidants; promote responsible student government; 
+								encourage student-faculty interaction in the college through cultural and educational 
+								programs, social events, and other activities; and help students understand the university's 
+								broad curriculum and vast experiential learning opportunities.
+							</p>
+							<p style="font-weight:bold; font-size:2rem;">
+								See the college magisters for each college below!
+							</p>
+						</div>
+					</div>
+					<div id="res-assoc-content" class="card mx-auto top-info mb-4">
+						<div class="card-body">
+							<p>
+								Resident Associates (RAs) are crucial to the Rice University college system, assisting 
+								magisters in supporting the intellectual, social, and cultural activities within the college. 
+								Living among the students, Resident Associates are in a unique position to be a positive 
+								community facilitator, role model, and to provide guidance and leadership to college members. 
+								Resident Associates, therefore, must be a visible participant in college life, accessible to 
+								students, and willing to stand in for the magisters, when appropriate.
+							</p>
+							<p>
+								The primary goal of every RA should be to support the magisters in the smooth and effective 
+								running of the college.  Although the specific role that any particular RA plays may vary with 
+								each individual and college, a successful RA will make continual effort to know the members of 
+								the college, be accessible to and serve as a point of contact for all students within the 
+								college, and help students understand and access university resources. RAs will encourage and 
+								contribute actively to the intellectual, cultural, and social life of the college, develop a 
+								clear understanding of university policies and procedures, including emergency response 
+								protocols, and assist the college magisters and other university officials in responding to 
+								students in need.   
+							</p>
+							<p>
+								RAs are appointed by the Dean of Undergraduates for an initial year in the college.  At the 
+								end of the first year, RAs are evaluated by their college magisters, who may then recommend a 
+								three-year appointment, subject to final approval by the Dean of Undergraduates.  The 
+								three-year appointment may be repeated once for a maximum total of seven years.  However, all 
+								RAs will be evaluated each year, and the magisters or the dean may exercise the option of not 
+								renewing an appointment at any time.  Service is conditioned on satisfactory performance.
+							</p>
+							<p>
+								<span style="font-weight:bold;"> Minimum qualifications for RAs: </span>
+								<ul class="text-left">
+									<li> Full-time faculty or staff at Rice University </li>
+									<li> Employed or studied at Rice for at least a year before start of RA term </li>
+									<li> Recent Rice undergraduate alumni, who fulfill all other requirements, must have graduated at least four years prior to appointment </li>
+									<li> All RAs must be in good standing in their employment status </li>
+									<li> All RAs (including non-Rice RAs) need to satisfactorily complete a background check </li>
+									<li> RAs are appointed by the Dean of Undergraduates </li>
+								</ul>
+							</p>
+							<p>
+								Resident Associate openings are announced by the college and the Office of the Dean of 
+								Undergraduates.  The colleges connect with the dean's office about the format of the search 
+								process and coordinate opportunities to meet candidates at programs and events at the colleges. 
+								The Office of the Dean of Undergraduates will host RA Information Sessions once openings are 
+								announced, which can provide considerably greater detail about the role and responsibities of 
+								RAs. Competitive candidates are selected to interview with the college.  The magister(s) select 
+								the finalists and the dean's office appoints RAs to their position. 
+							</p>
+							<p style="font-weight:bold; font-size:2rem;">
+								See the residentials associates for each college below!
+							</p>
+						</div>
+					</div>
+					<div id="college-coord-content" class="card mx-auto top-info">
+						<div class="card-body">
+							<p>
+								College coordinators are staff members who serve as daytime contacts for students within 
+								their assigned college. They typically keep a 9-5 schedule and their duties include managing 
+								the college's office budget, notifying students of important deadlines, sorting the mail, and 
+								acting as the primary contact between the residential colleges and other university offices. 
+								The college coordinator's office is the nerve center of the college, a main meeting place where 
+								students stop by to chat and get answers to questions on everything from how to pay a parking 
+								ticket, replace a room key or when to meet important deadlines. 
+							</p>
+							<p style="font-weight:bold; font-size:2rem;">
+								See the college coordinaters for each college below!
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

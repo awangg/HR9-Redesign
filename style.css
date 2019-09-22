@@ -28,14 +28,65 @@ nav {
 }
 
 /* Top Introduction */
-#res-intro {
+.top-info {
 	width: 50%;
 }
 
-/* Sliding Banner Links */
-.banner-link {
-	background-color: #f00;
-	opacity: .7;
+/* Top Buttons */
+/* Default */
+#college-assign-content,
+#college-magister-content,
+#res-assoc-content,
+#college-coord-content {
+	display: none;
+}
+
+/* Focused College Assign */
+#toggle-college-assign:focus ~ #college-assign-content {
+	display: block;
+}
+
+#toggle-college-assign:focus ~ #college-magister-content,
+#toggle-college-assign:focus ~ #res-assoc-content,
+#toggle-college-assign:focus ~ #college-coord-content,
+#toggle-college-assign:focus ~ #reg-intro {
+	display: none;
+}
+
+/* Focused College Magister */
+#toggle-college-magister:focus ~ #college-magister-content {
+	display: block;
+}
+
+#toggle-college-magister:focus ~ #college-assign-content,
+#toggle-college-magister:focus ~ #res-assoc-content,
+#toggle-college-magister:focus ~ #college-coord-content,
+#toggle-college-magister:focus ~ #reg-intro {
+	display: none;
+}
+
+/* Focused Res Assoc */
+#toggle-res-assoc:focus ~ #res-assoc-content {
+	display: block;
+}
+
+#toggle-res-assoc:focus ~ #college-assign-content,
+#toggle-res-assoc:focus ~ #college-magister-content,
+#toggle-res-assoc:focus ~ #college-coord-content,
+#toggle-res-assoc:focus ~ #reg-intro {
+	display: none;
+}
+
+/* Focused College Coord */
+#toggle-college-coord:focus ~ #college-coord-content {
+	display: block;
+}
+
+#toggle-college-coord:focus ~ #college-assign-content,
+#toggle-college-coord:focus ~ #college-magister-content,
+#toggle-college-coord:focus ~ #res-assoc-content,
+#toggle-college-coord:focus ~ #reg-intro {
+	display: none;
 }
 
 /* College Information */
